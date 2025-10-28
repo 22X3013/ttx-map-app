@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "恵那市役所", "type": "市役所" },
+      "geometry": { "type": "Point", "coordinates": [137.4130, 35.4492] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "恵那南中学校", "type": "学校" },
+      "geometry": { "type": "Point", "coordinates": [137.4207, 35.4335] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "恵那総合病院", "type": "病院" },
+      "geometry": { "type": "Point", "coordinates": [137.4164, 35.4487] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "恵那文化センター（避難所）", "type": "避難所" },
+      "geometry": { "type": "Point", "coordinates": [137.4124, 35.4477] }
+    }
+  ]
+}

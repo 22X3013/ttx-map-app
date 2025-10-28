@@ -1,0 +1,6 @@
+[
+    { "id": "e1", "time": "13:10", "title": "Earthquake (Iinsendacho)", "type": "earthquake", "lat": 35.4600, "lng": 137.4100, "note": "震度観測・初動対応" },
+    { "id": "e2", "time": "13:20", "title": "Evacuation Center Opened (Ena Elementary)", "type": "shelter", "lat": 35.4490, "lng": 137.4100, "note": "恵那小学校避難所開設" },
+    { "id": "e3", "time": "13:30", "title": "Misinformation flagged", "type": "misinfo", "lat": 35.4440, "lng": 137.4200, "note": "SNS情報の真偽確認・フラグ" },
+    { "id": "e4", "time": "13:35", "title": "Decision to issue advisories", "type": "decision", "lat": 35.4380, "lng": 137.4000, "note": "避難情報の発令判断" }
+]

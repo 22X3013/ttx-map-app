@@ -1,0 +1,315 @@
+.app-root {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    height: 100vh;
+  }
+  
+  /* タイムライン部分 */
+  .timeline-wrap {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .timeline-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* 地図部分 */
+  .map-wrap {
+    position: relative;
+  }
+  
+  /* ローディング用バッジ */
+  .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+  
+  /* エラー表示 */
+  .error-box {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    max-width: 360px;
+    padding: 8px 10px;
+    background: rgba(255, 230, 230, 0.95);
+    border: 1px solid #f2b5b5;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #a40000;
+  }
+  /* Leafletの丸ピン周りの不要な隙間を抑える */
+.leaflet-marker-icon.ttx-pin {
+    background: transparent;
+    border: none;
+  }
+  .left-pane {
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    overflow: auto;
+  }
+  
+  .filter-bar {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .filter-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 6px;
+  }
+  
+  .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  
+  .filter-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 6px 8px;
+    font-size: 13px;
+    user-select: none;
+  }
+  
+  .filter-chip input {
+    width: 14px;
+    height: 14px;
+  }
+  
+  @media (min-width: 1200px) {
+    .filter-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  /* 共通ボタン */
+.btn {
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  .btn:hover { background: #f6f6f6; }
+  .btn.primary {
+    border-color: #3b82f6;
+    background: #3b82f6;
+    color: #fff;
+  }
+  .btn.primary:hover { background: #2f6fd5; }
+  .btn.ghost { background: transparent; border: none; font-size: 18px; }
+  
+  /* 右スライドのドロワー */
+  .drawer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 360px;
+    height: 100vh;
+    background: #fff;
+    border-left: 1px solid #e5e5e5;
+    box-shadow: -4px 0 16px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    animation: slideIn .2s ease-out;
+    z-index: 5000;
+  }
+  @keyframes slideIn { from { transform: translateX(30px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+  
+  .drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+  }
+  .drawer-title { font-weight: 700; }
+  
+  .form { padding: 12px 14px; display: grid; gap: 10px; }
+  .row { display: grid; gap: 6px; }
+  .row label { font-size: 12px; color: #666; }
+  .row input, .row select, .row textarea {
+    border: 1px solid #d0d0d0; border-radius: 8px; padding: 8px; font-size: 14px;
+  }
+  .hint { font-size: 12px; color: #666; }
+  .error-inline { font-size: 12px; color: #a40000; background: #ffecec; border: 1px solid #f2b5b5; padding: 6px 8px; border-radius: 6px; }
+  .actions { display: flex; justify-content: flex-end; gap: 8px; }
+  /* 3カラム化（左：320 / 中央：auto / 右：320） */
+.app-root {
+    display: grid;
+    grid-template-columns: 320px 1fr 320px;
+    height: 100vh;
+  }
+  
+  @media (max-width: 1100px) {
+    /* 画面が狭い時はログを重ねて表示（右下固定） */
+    .app-root {
+      grid-template-columns: 320px 1fr;
+    }
+    .log-pane {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      width: 320px;
+      height: 40vh;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      border: 1px solid #e5e5e5;
+      background: #fff;
+      z-index: 4000;
+    }
+  }
+  
+  /* ログパネル */
+  .log-pane {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #ddd;
+    background: #fafafa;
+  }
+  
+  .log-header {
+    padding: 10px 12px;
+    font-weight: 700;
+    border-bottom: 1px solid #e5e5e5;
+    background: #fff;
+  }
+  
+  .log-list {
+    flex: 1;
+    overflow: auto;
+    padding: 8px;
+  }
+  
+  .log-empty {
+    color: #777;
+    font-size: 12px;
+  }
+  
+  .log-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 6px 8px;
+    margin-bottom: 6px;
+  }
+  
+  .log-time {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 12px;
+    color: #555;
+  }
+  
+  .log-main {
+    display: grid;
+    gap: 2px;
+  }
+  
+  .log-actor {
+    font-weight: 600;
+    font-size: 12px;
+  }
+  
+  .log-action {
+    font-size: 12px;
+    color: #333;
+  }
+  
+  .log-payload {
+    margin: 4px 0 0;
+    font-size: 11px;
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 6px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+.log-row.action-marker_click { border-left: 4px solid #3b82f6; }
+.log-row.action-event_create { border-left: 4px solid #22c55e; }
+.log-row.action-warning      { border-left: 4px solid #f59e0b; }
+
+/* タイムラインの行（選択強調） */
+.tl-row { margin: 10px 0; }
+.tl-card {
+  width: 100%; text-align: left; margin: 0; padding: 12px 14px;
+  border: 1px solid #ccc; border-radius: 12px; background: #fff;
+}
+.tl-row.active .tl-card { border: 2px solid #70a1ff; background: #eaf2ff; }
+.tl-title { font-weight: 700; }
+.tl-type { font-size: 12px; color: #666; }
+
+/* 選択マーカーの点滅アニメ */
+@keyframes pinPulse {
+  0% { transform: scale(1);    box-shadow: 0 0 0 1px rgba(37, 99, 235, .35); }
+  50%{ transform: scale(1.12); box-shadow: 0 0 0 4px rgba(37, 99, 235, .18); }
+  100%{transform: scale(1);    box-shadow: 0 0 0 1px rgba(37, 99, 235, .35); }
+}
+.leaflet-marker-icon.ttx-pin { background: transparent; border: none; }
+/* --- Log panel layout (既存と整合) --- */
+.log-pane { display:flex; flex-direction:column; border-left:1px solid #ddd; background:#fafafa; }
+.log-header { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:10px 12px; border-bottom:1px solid #e5e5e5; background:#fff; }
+.log-title { font-weight:700; }
+.log-tools { display:flex; gap:8px; align-items:center; }
+.log-filter { height:32px; padding:0 8px; border:1px solid #ddd; border-radius:8px; background:#fff; }
+.log-list { flex:1; overflow:auto; padding:8px; }
+.log-empty { color:#777; font-size:12px; text-align:center; padding:24px 0; }
+
+.log-row { display:grid; grid-template-columns:64px 1fr; gap:8px; background:#fff; border:1px solid #eee; border-radius:10px; padding:8px; margin-bottom:8px; }
+.log-time { font-family:ui-monospace, Menlo, Monaco, Consolas, "Courier New", monospace; font-size:12px; color:#555; }
+.log-main { display:grid; gap:2px; }
+.log-actor { font-weight:600; font-size:12px; }
+.log-action { font-size:12px; color:#333; }
+.log-payload { margin-top:6px; font-size:11px; background:#f8f8f8; border:1px solid #eee; border-radius:6px; padding:6px; white-space:pre-wrap; word-break:break-word; }
+
+/* --- 色分け（action に応じて） --- */
+.log-row.action-click  { border-left:4px solid #3b82f6; }  /* 青：クリック等 */
+.log-row.action-create { border-left:4px solid #22c55e; }  /* 緑：作成 */
+.log-row.action-warn   { border-left:4px solid #f59e0b; }  /* 橙：警告 */
+/* 例: src/index.css */
+.tl-date-head { position: sticky; top: 0; background: #fff; padding: 4px 6px; font-weight: 700; border-bottom: 1px solid #eee; z-index: 1; }
+.tl-row { margin: 6px 0; padding-left: 6px; }
+.tl-row .tl-card { display: block; width: 100%; text-align: left; border: 1px solid #e5e7eb; border-radius: 8px; padding: 8px 10px; background: #fff; }
+.tl-row.active .tl-card { box-shadow: 0 0 0 2px #2563eb33; }
+.tl-title { font-weight: 600; }
+.tl-type { font-size: 12px; color: #666; margin-top: 2px; }
+
+/* カードっぽいボックス */
+.card { background:#fff; border:1px solid #e5e7eb; border-radius:8px; }
+.p-2 { padding:8px; }
+.section-title { font-weight:700; margin-bottom:6px; }
+
+/* 入力 */
+.input { border:1px solid #d1d5db; border-radius:6px; padding:4px 8px; background:#fff; }
+.row { display:flex; align-items:center; justify-content:space-between; border:1px solid #e5e7eb; border-radius:8px; padding:6px 8px; background:#fff; }
+.pill { display:inline-flex; align-items:center; border:1px solid; border-radius:999px; padding:2px 8px; font-weight:600; }
+
+/* 小物 */
+.link { background:none; border:none; color:#2563eb; text-decoration:underline; cursor:pointer; }
+.text-sm { font-size:13px; }
+.opacity-70 { opacity:.7; }
+
+/* （既存の .btn, .btn.primary などはそのままでOK） */

@@ -1,0 +1,641 @@
+{
+  "scenarios": [
+    {
+      "id": "default",
+      "name": "Ena City TTX",
+      "createdAt": "2025-10-12T00:00:00Z"
+    },
+    {
+      "id": "5f39b38b-d1c6-406a-acf0-9da80b79306b",
+      "name": "演習シナリオ",
+      "createdAt": "2025-10-27T15:02:08.708Z"
+    },
+    {
+      "id": "d4d5e6bf-1780-4732-9dc8-8425d7ca9183",
+      "name": "演習シナリオ＿１",
+      "createdAt": "2025-10-28T09:51:13.624Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "scenarioId": "default",
+      "time": "13:10",
+      "title": "Earthquake (Iinsendacho)",
+      "type": "earthquake",
+      "lat": 35.46,
+      "lng": 137.41,
+      "note": ""
+    },
+    {
+      "id": "e2",
+      "scenarioId": "default",
+      "time": "13:20",
+      "title": "Evacuation Center Opened (Ena Elementary)",
+      "type": "shelter",
+      "lat": 35.449,
+      "lng": 137.41,
+      "note": ""
+    },
+    {
+      "id": "e4",
+      "scenarioId": "default",
+      "time": "13:35",
+      "title": "Decision to issue advisories",
+      "type": "decision",
+      "lat": 35.438,
+      "lng": 137.4,
+      "note": ""
+    }
+  ],
+  "logs": [
+    {
+      "id": "ffdf79b8-d27d-4895-9a9a-c5dac8f0dde9",
+      "time": "2025-10-14T22:16:27.445Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "e1",
+        "title": "Earthquake (Iinsendacho)",
+        "kind": "disaster",
+        "category": "earthquake",
+        "channel": "action",
+        "type": "earthquake"
+      }
+    },
+    {
+      "id": "dd0a78d5-6e78-4942-9e26-9be39f4f715a",
+      "time": "2025-10-14T22:16:44.861Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420988857",
+        "title": "恵那警察署駅前交番",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "police"
+      }
+    },
+    {
+      "id": "c36ec8a9-47e1-4d6c-a520-256e91fe1fd4",
+      "time": "2025-10-14T22:16:49.738Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420998318",
+        "title": "岐阜県立恵那農業高等学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "7831a650-ccc4-4c2d-a8ea-d39718c95151",
+      "time": "2025-10-27T15:01:41.672Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420985439",
+        "title": "市立坂本中学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "7290d0c5-f087-40b0-84e7-3c9610c475f3",
+      "time": "2025-10-27T15:06:11.797Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420985479",
+        "title": "市立大井第二小学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "26102708-aaa3-401f-b613-6cd8796c2682",
+      "time": "2025-10-27T15:06:16.684Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi9739593759",
+        "title": "市立大井小学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "2782a13d-15e9-451d-a812-4775bd9b2980",
+      "time": "2025-10-27T15:06:21.593Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "e1",
+        "title": "Earthquake (Iinsendacho)",
+        "kind": "disaster",
+        "category": "earthquake",
+        "channel": "action",
+        "type": "earthquake"
+      }
+    },
+    {
+      "id": "3e0811e8-1f6c-4cc3-9be6-a711ece5516c",
+      "time": "2025-10-27T15:57:47.100Z",
+      "actor": "User",
+      "action": "イベント作成",
+      "payload": {
+        "id": "f6b52b64-c186-4893-bf32-b8dbca361b13",
+        "title": "色々",
+        "kind": "disaster",
+        "category": "earthquake",
+        "channel": "action",
+        "scenarioId": "default"
+      }
+    },
+    {
+      "id": "44401ba8-87b3-410e-8b02-0ee25f5373b7",
+      "time": "2025-10-27T15:59:13.222Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420985479",
+        "title": "市立大井第二小学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "6fd57229-520c-4be5-98f6-f088a29a92a5",
+      "time": "2025-10-27T16:00:23.065Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "f6b52b64-c186-4893-bf32-b8dbca361b13",
+        "title": "色々",
+        "kind": "disaster",
+        "category": "earthquake",
+        "channel": "action"
+      }
+    },
+    {
+      "id": "9a402ce6-fd70-4ebf-a626-1f62c11c6d81",
+      "time": "2025-10-27T16:52:51.319Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "f6b52b64-c186-4893-bf32-b8dbca361b13",
+        "title": "色々",
+        "kind": "disaster",
+        "category": "earthquake",
+        "channel": "action"
+      }
+    },
+    {
+      "id": "bc3a8113-edb7-4afb-a91f-dfb0936bd114",
+      "time": "2025-10-27T16:53:48.517Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420985479",
+        "title": "市立大井第二小学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "3745da76-0cef-448b-916d-f3d0bdfa148f",
+      "time": "2025-10-27T16:54:46.445Z",
+      "actor": "User",
+      "action": "イベント作成",
+      "payload": {
+        "id": "70ed51be-4616-4da3-80a1-adb720f400c0",
+        "title": "色々",
+        "kind": "disaster",
+        "category": "landslide",
+        "channel": "action",
+        "scenarioId": "default"
+      }
+    },
+    {
+      "id": "0e0932f9-4579-4169-ac37-e8f4091d8b11",
+      "time": "2025-10-27T19:15:08.444Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420988856",
+        "title": "恵那警察署笠置駐在所",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "police"
+      }
+    },
+    {
+      "id": "15fa41e5-6bda-48da-9d24-610abc360e5f",
+      "time": "2025-10-27T19:15:16.290Z",
+      "actor": "User",
+      "action": "イベント削除",
+      "payload": {
+        "id": "f6b52b64-c186-4893-bf32-b8dbca361b13"
+      }
+    },
+    {
+      "id": "ee154e99-42b9-47e1-8dda-84d7a55e3adb",
+      "time": "2025-10-27T19:15:19.746Z",
+      "actor": "User",
+      "action": "イベント削除",
+      "payload": {
+        "id": "70ed51be-4616-4da3-80a1-adb720f400c0"
+      }
+    },
+    {
+      "id": "3f89c280-60a4-46d7-8d00-9f7c60adb0d4",
+      "time": "2025-10-27T19:15:51.003Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "c9f928ff-cbf0-471f-8b18-ef5477de587e",
+        "title": "色々",
+        "kind": "disaster",
+        "category": "landslide",
+        "channel": "action"
+      }
+    },
+    {
+      "id": "be44b4c7-60f7-4820-b46e-5e7e91df2972",
+      "time": "2025-10-27T19:16:05.872Z",
+      "actor": "User",
+      "action": "イベント削除",
+      "payload": {
+        "id": "c9f928ff-cbf0-471f-8b18-ef5477de587e"
+      }
+    },
+    {
+      "id": "4d4f1dad-6dff-41b3-88d5-cce8105541ba",
+      "time": "2025-10-27T22:00:48.682Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420986295",
+        "title": "市立武並小学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "e84804ba-b8ba-4cc1-ba9c-3b795371883d",
+      "time": "2025-10-27T22:01:44.568Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420988855",
+        "title": "恵那警察署武並駐在所",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "police"
+      }
+    },
+    {
+      "id": "fcb9128f-ece4-4d19-848f-33bc05c5f271",
+      "time": "2025-10-27T22:01:47.320Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420986295",
+        "title": "市立武並小学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "29ddd0ec-df2c-466b-af8b-08a2278a145c",
+      "time": "2025-10-27T22:29:48.974Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "e2",
+        "title": "Evacuation Center Opened (Ena Elementary)",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "shelter"
+      }
+    },
+    {
+      "id": "73c2a160-27e6-4e1c-b291-17b53ae40a8b",
+      "time": "2025-10-27T22:29:53.030Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi9739593757",
+        "title": "恵那市立長島小学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "873af222-2572-4d0a-a9b0-7fe1d04f1afb",
+      "time": "2025-10-27T22:29:54.965Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "e2",
+        "title": "Evacuation Center Opened (Ena Elementary)",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "shelter"
+      }
+    },
+    {
+      "id": "d4165ecb-f0cf-4072-b2cf-00f96a24b51f",
+      "time": "2025-10-27T22:30:05.587Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "e3",
+        "title": "Misinformation flagged",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "misinfo"
+      }
+    },
+    {
+      "id": "ceb0184d-de54-4124-a9bc-d0b47afae307",
+      "time": "2025-10-27T22:31:24.935Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420997988",
+        "title": "岐阜県立中津川工業高等学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "7ebbeb17-2310-4758-b191-cf6a2b5d6f8c",
+      "time": "2025-10-27T22:31:28.233Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420985440",
+        "title": "市立坂本小学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "59e03edd-c01d-43b9-ae24-5a63f79dc95d",
+      "time": "2025-10-27T22:31:31.031Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420985439",
+        "title": "市立坂本中学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "18fc365f-83fc-4228-820f-c91879db0f44",
+      "time": "2025-10-27T22:31:34.182Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420976578",
+        "title": "中津川警察署坂本交番",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "police"
+      }
+    },
+    {
+      "id": "01558467-a735-4deb-af51-70f966278354",
+      "time": "2025-10-27T23:04:13.762Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi7849621582",
+        "title": "恵那市消防本部",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "fire_station"
+      }
+    },
+    {
+      "id": "8432ceab-ca68-4f3e-844d-bfc6589462b2",
+      "time": "2025-10-27T23:04:20.506Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi9739593759",
+        "title": "市立大井小学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "92fddb56-993b-4e36-8d0c-29c15417892b",
+      "time": "2025-10-27T23:04:22.253Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420988857",
+        "title": "恵那警察署駅前交番",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "police"
+      }
+    },
+    {
+      "id": "8fec4b38-35f9-4058-ad5b-1202054f98d1",
+      "time": "2025-10-28T01:39:07.328Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420988857",
+        "title": "恵那警察署駅前交番",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "police"
+      }
+    },
+    {
+      "id": "7c65098d-cfa9-4f79-a061-92d7b714e496",
+      "time": "2025-10-28T01:39:08.947Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi9739593759",
+        "title": "市立大井小学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "b2752115-2533-4dfa-ad52-067c064ec684",
+      "time": "2025-10-28T01:39:10.756Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "e1",
+        "title": "Earthquake (Iinsendacho)",
+        "kind": "disaster",
+        "category": "earthquake",
+        "channel": "action",
+        "type": "earthquake"
+      }
+    },
+    {
+      "id": "cac96f7b-056b-443e-b5e2-768e69386af3",
+      "time": "2025-10-28T01:40:14.871Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420988847",
+        "title": "恵那警察署",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "police"
+      }
+    },
+    {
+      "id": "723cd139-4d89-4c14-9b7a-40d7eb2170be",
+      "time": "2025-10-28T01:40:36.751Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "e1",
+        "title": "Earthquake (Iinsendacho)",
+        "kind": "disaster",
+        "category": "earthquake",
+        "channel": "action",
+        "type": "earthquake"
+      }
+    },
+    {
+      "id": "8b144964-3079-482e-acca-8ca60562fadf",
+      "time": "2025-10-28T01:40:44.732Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420985938",
+        "title": "市立恵那病院",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "hospital"
+      }
+    },
+    {
+      "id": "310bfd37-9d72-4341-85f5-e6674f736f2f",
+      "time": "2025-10-28T01:40:48.997Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "poi1420988862",
+        "title": "恵那養護学校",
+        "kind": "disaster",
+        "category": "other",
+        "channel": "action",
+        "type": "school"
+      }
+    },
+    {
+      "id": "564cef85-1f0c-44eb-94e7-29337b836713",
+      "time": "2025-10-28T09:48:31.579Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "fff97219-ce8a-4627-b2de-96202a2824c9",
+        "title": "避難発令",
+        "kind": "disaster",
+        "category": "landslide",
+        "channel": "damage"
+      }
+    },
+    {
+      "id": "d0984f12-481e-41aa-9e6a-2af3c96bab42",
+      "time": "2025-10-28T17:26:33.572Z",
+      "actor": "User",
+      "action": "イベント削除",
+      "payload": {
+        "id": "fff97219-ce8a-4627-b2de-96202a2824c9"
+      }
+    },
+    {
+      "id": "4940e553-ea57-4563-a054-e17f54e86dc1",
+      "time": "2025-10-28T17:26:39.405Z",
+      "actor": "User",
+      "action": "イベント削除",
+      "payload": {
+        "id": "e3"
+      }
+    },
+    {
+      "id": "65d5875a-dc48-4ea7-8344-ea1078c06f3b",
+      "time": "2025-10-28T17:26:42.304Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "e1",
+        "title": "地震発生",
+        "kind": "disaster",
+        "category": "earthquake",
+        "channel": "action",
+        "type": "earthquake"
+      }
+    },
+    {
+      "id": "b809ad02-bac1-4492-9f27-cb82eed66994",
+      "time": "2025-10-28T17:29:03.020Z",
+      "actor": "User",
+      "action": "マーカークリック",
+      "payload": {
+        "id": "e1",
+        "title": "地震発生",
+        "kind": "disaster",
+        "category": "earthquake",
+        "channel": "action",
+        "type": "earthquake"
+      }
+    }
+  ],
+  "participants": []
+}
