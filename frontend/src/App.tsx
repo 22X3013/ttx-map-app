@@ -18,6 +18,9 @@ type LogItem = {
   payload?: Record<string, any>;
 };
 
+// ✅ バックエンドAPIのベースURL（RenderのURLを利用）
+const API_BASE = import.meta.env.VITE_API_BASE || '/api';
+
 // ---- 定数 ----
 const EVENTS_FALLBACK = '/events.json';
 const POI_CACHE_KEY = 'ena_pois_v1';
@@ -93,7 +96,7 @@ export default function App() {
     (async () => {
       setLoading((s) => ({ ...s, events: true }));
       try {
-        const r = await fetch(`/api/events?scenarioId=${encodeURIComponent(scenarioId)}`);
+        const r = await fetch(`${API_BASE}/events?scenarioId=${encodeURIComponent(scenarioId)}`);
         if (!r.ok) throw new Error();
         const data: Pin[] = await r.json();
         if (!cancelled) setEvents(data);
@@ -137,7 +140,7 @@ export default function App() {
   useEffect(() => {
     const timer = setInterval(async () => {
       try {
-        const r = await fetch('/api/logs');
+        const r = await fetch(`${API_BASE}/logs`);
         if (!r.ok) throw new Error();
         const data: LogItem[] = await r.json();
         setLogs(data.slice().reverse());
@@ -171,7 +174,7 @@ export default function App() {
   // --- イベント追加 ---
   async function saveNewEvent(data: DraftEvent) {
     const payload = { ...data, scenarioId };
-    const res = await fetch('/api/events', {
+    const res = await fetch(`${API_BASE}/events`, {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload),
     });
     if (!res.ok) throw new Error(`保存に失敗 (${res.status})`);
@@ -187,7 +190,7 @@ export default function App() {
     const ok = confirm(`イベント「${target.title}」を削除しますか？`);
     if (!ok) return;
 
-    const res = await fetch(`/api/events/${id}`, { method: 'DELETE' });
+    const res = await fetch(`${API_BASE}/events/${id}`, { method: 'DELETE' });
     if (!res.ok) { alert('削除に失敗しました'); return; }
 
     setEvents((prev) => prev.filter((e) => e.id !== id));
@@ -200,7 +203,7 @@ export default function App() {
     setUndoStack((prev) => [...prev, { event: target, timer }]);
 
     // ログ追加
-    await fetch('/api/logs', {
+    await fetch(`${API_BASE}/logs`, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ actor: 'User', action: 'イベント削除', payload: { id } }),
     });
@@ -213,7 +216,7 @@ export default function App() {
     setUndoStack((prev) => prev.slice(0, -1));
 
     // サーバーに再登録
-    const res = await fetch('/api/events', {
+    const res = await fetch(`${API_BASE}/events`, {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(last.event),
     });
     const restored = await res.json();
