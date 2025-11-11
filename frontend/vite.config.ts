@@ -8,19 +8,26 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// ⚙️ 公開リポジトリ名を指定（例：ttx-map-app）
+const repoName = 'ttx-map-app'; // ← あなたのGitHubリポジトリ名に変更
+
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: `/${repoName}/`, // ✅ GitHub Pages用にルートパスを調整
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // ✅ import '@/components/...'
+      '@': path.resolve(__dirname, './src'),
     },
+  },
+  build: {
+    outDir: 'dist', // ✅ ビルド結果フォルダ
   },
   server: {
     port: 5173,
-    open: true, // ✅ 起動時にブラウザを自動で開く
+    open: true,
     proxy: {
-      // ✅ バックエンド(Express)のAPIを5174へ転送
+      // ✅ 開発中のみバックエンドAPIを転送
       '/api': {
         target: 'http://localhost:5174',
         changeOrigin: true,
