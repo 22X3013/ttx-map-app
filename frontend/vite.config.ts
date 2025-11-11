@@ -29,7 +29,7 @@ export default defineConfig({
     proxy: {
       // ✅ 開発中のみバックエンドAPIを転送
       '/api': {
-        target: 'http://localhost:5174',
+        target: 'https://ttx-backend.onrender.com',
         changeOrigin: true,
         secure: false,
       },
