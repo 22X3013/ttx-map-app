@@ -219,3 +219,7 @@ const PORT = Number(process.env.PORT || 5174);
 app.listen(PORT, () => {
   console.log(`✅ Backend API running at http://localhost:${PORT}`);
 });
+// ✅ Render動作確認用（トップページ）
+app.get("/", (_req, res) => {
+  res.send("✅ Backend is running on Render!");
+});
